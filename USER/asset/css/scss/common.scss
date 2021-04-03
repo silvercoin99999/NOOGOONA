@@ -41,6 +41,11 @@
     background-color: #888;
   }
 }
+@include MOBILE {
+  .h2 {
+    font-size: 18px;
+  }
+}
 
 // * -------------------------------
 // * layout
