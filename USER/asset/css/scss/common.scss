@@ -41,11 +41,6 @@
     background-color: #888;
   }
 }
-@include MOBILE {
-  .h2 {
-    font-size: 16px;
-  }
-}
 
 // * -------------------------------
 // * layout
@@ -242,7 +237,7 @@ body {
       height: auto;
       flex-direction: column-reverse;
       align-items: center;
-      padding: 15px 0;
+      padding-top: 25px;
 
       ul {
         display: flex;
@@ -250,7 +245,7 @@ body {
         flex-wrap: wrap;
 
         &.footer-link {
-          margin-top: 5px;
+          margin: 20px 0;
 
           > li {
             &:first-child {
@@ -262,7 +257,7 @@ body {
 
         &.sns {
           margin-left: 0;
-          font-size: 20px;
+          font-size: 18px;
 
           > li {
             & + li {
