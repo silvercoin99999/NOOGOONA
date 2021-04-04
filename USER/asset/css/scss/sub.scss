@@ -1,0 +1,56 @@
+//* ==========================
+//* mixin
+//* ==========================
+@mixin MOBILE {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+//* ==========================
+//* h2
+//* ==========================
+.h2 {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 500;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+@include MOBILE {
+  .h2 {
+    font-size: 23px;
+  }
+}
+
+//* ==========================
+//* sub-visual
+//* ==========================
+.sub-visual {
+  position: relative;
+  height: 300px;
+  background-image: url(../img/sub/sub-visual.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+@include MOBILE {
+  .sub-visual {
+    height: 150px;
+  }
+}
