@@ -8,6 +8,41 @@
 }
 
 //* ==========================
+//* check-box
+//* ==========================
+.check-box {
+  display: inline-flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    & + * {
+      margin-left: 5px;
+    }
+  }
+
+  strong {
+    font-weight: 500px;
+    font-size: 18px;
+  }
+}
+
+//* ==========================
+//* check-box-wrap
+//* ==========================
+.check-box-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -10px;
+  margin-left: -15px;
+
+  .check-box {
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+}
+
+//* ==========================
 //* h2
 //* ==========================
 .h2 {
@@ -25,6 +60,48 @@
 @include MOBILE {
   .h2 {
     font-size: 23px;
+  }
+}
+
+//* ==========================
+//* btn
+//* ==========================
+.btn {
+  padding: 0 20px;
+  height: 50px;
+  border-radius: 0px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+
+  > * + * {
+    margin-left: 3px;
+  }
+
+  &--primary {
+    background-color: #2fcfe3;
+  }
+
+  &--negative {
+    background-color: #888;
+  }
+}
+
+//* ==========================
+//* btn
+//* ==========================
+.btn-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: -10px;
+
+  .btn {
+    margin-left: 10px;
+  }
+
+  &--center {
+    justify-content: center;
   }
 }
 
@@ -52,5 +129,131 @@
 @include MOBILE {
   .sub-visual {
     height: 150px;
+  }
+}
+
+//* ==========================
+//* signup-wrap
+//* ==========================
+.signup-wrap {
+  .step {
+    display: flex;
+    margin-top: 30px;
+
+    > li {
+      position: relative;
+      width: 100%;
+      padding-top: 40px;
+      text-align: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        background-color: #ccc;
+        height: 1px;
+        left: -50%;
+        top: 20px;
+      }
+
+      &:first-child {
+        &::before {
+          display: none;
+        }
+      }
+
+      .num {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-50%);
+        background-color: #ccc;
+      }
+
+      .txt {
+        display: block;
+        margin-top: 5px;
+      }
+
+      &.path {
+        &::before {
+          background-color: #2fcfe3;
+        }
+
+        .num {
+          border: 3px solid #2fcfe3;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+@include MOBILE {
+  .signup-wrap {
+    .step {
+      margin-top: 20px;
+
+      > li {
+        padding-top: 30px;
+
+        &::before {
+          top: 15px;
+        }
+
+        .num {
+          width: 31px;
+          height: 31px;
+        }
+
+        .txt {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+//* ==========================
+//* terms-box
+//* ==========================
+.terms-box {
+  margin-top: 50px;
+  border: 1px solid #ccc;
+
+  .terms-head {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #f1fdff;
+    border-bottom: 1px solid #ccc;
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .terms-body {
+    padding: 20px;
+    overflow-y: scroll;
+    height: 250px;
+  }
+}
+
+.check-box-wrap--terms {
+  margin-top: 20px;
+  justify-content: center;
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
   }
 }
