@@ -8,6 +8,43 @@
 }
 
 //* ==========================
+//* emphasis-color
+//* ==========================
+.emphasis-color1 {
+  color: rgb(231, 44, 60);
+}
+
+.emphasis-color2 {
+  color: #2fcfe3;
+}
+
+//* ==========================
+//* input
+//* ==========================
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  height: 35px;
+  padding: 0 7px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+//* ==========================
+//* textarea
+//* ==========================
+textarea {
+  display: block;
+  width: 100%;
+  height: 80px;
+  padding: 7px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+//* ==========================
 //* check-box
 //* ==========================
 .check-box {
@@ -21,8 +58,7 @@
   }
 
   strong {
-    font-weight: 500px;
-    font-size: 18px;
+    font-weight: 500;
   }
 }
 
@@ -40,6 +76,44 @@
     margin-top: 10px;
     margin-left: 15px;
   }
+}
+
+//* ==========================
+//* radio-box
+//* ==========================
+.radio-box {
+  display: inline-flex;
+  align-items: center;
+
+  input[type="radio"] {
+    & + * {
+      margin-left: 5px;
+    }
+  }
+}
+
+//* ==========================
+//* radio-box-wrap
+//* ==========================
+.radio-box-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -10px;
+  margin-left: -15px;
+
+  .radio-box {
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+}
+
+//* ==========================
+//* flex
+//* ==========================
+.flex {
+  display: flex;
+  align-items: center;
 }
 
 //* ==========================
@@ -67,9 +141,11 @@
 //* btn
 //* ==========================
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 20px;
   height: 50px;
-  border-radius: 0px;
   border: none;
   color: #fff;
   font-weight: 500;
@@ -86,22 +162,40 @@
     background-color: #888;
   }
 }
+@include MOBILE {
+  .btn {
+    padding: 0 10px;
+    height: 40px;
+    font-weight: 500;
+  }
+}
 
 //* ==========================
 //* btn
 //* ==========================
 .btn-wrap {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 30px;
   margin-left: -10px;
 
   .btn {
+    margin-top: 10px;
     margin-left: 10px;
   }
 
   &--center {
     justify-content: center;
+  }
+}
+@include MOBILE {
+  .btn-wrap {
+    margin-top: 20px;
+
+    .btn {
+      width: 100%;
+    }
   }
 }
 
@@ -129,6 +223,22 @@
 @include MOBILE {
   .sub-visual {
     height: 150px;
+  }
+}
+
+//* ==========================
+//* section
+//* ==========================
+.section {
+  & + .section {
+    margin-top: 50px;
+  }
+}
+@include MOBILE {
+  .section {
+    & + .section {
+      margin-top: 25px;
+    }
   }
 }
 
@@ -228,16 +338,23 @@
   border: 1px solid #ccc;
 
   .terms-head {
-    padding: 0 20px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
-    height: 60px;
     background-color: #f1fdff;
     border-bottom: 1px solid #ccc;
 
     input[type="checkbox"] {
       width: 18px;
       height: 18px;
+    }
+
+    strong {
+      font-size: 18px;
+    }
+
+    span {
+      white-space: nowrap;
     }
   }
 
@@ -255,6 +372,39 @@
   input[type="checkbox"] {
     width: 18px;
     height: 18px;
+  }
+}
+@include MOBILE {
+  .terms-box {
+    margin-top: 30px;
+
+    .terms-head {
+      padding: 10px;
+
+      input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+      }
+
+      strong {
+        font-size: 15px;
+        line-height: 1.2;
+      }
+    }
+
+    .terms-body {
+      padding: 10px;
+      height: 200px;
+    }
+  }
+
+  .check-box-wrap--terms {
+    margin-top: 10px;
+
+    input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
@@ -368,8 +518,10 @@
 
 //* ==========================
 //* authentication-complete
+//* signup-complete
 //* ==========================
-.authentication-complete {
+.authentication-complete,
+.signup-complete {
   text-align: center;
 
   strong {
@@ -400,5 +552,77 @@
     .icon {
       font-size: 30px;
     }
+  }
+}
+
+//* ==========================
+//* basie-table
+//* ==========================
+.basie-table {
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: 1px solid #bbb;
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+  th {
+    background-color: #f1fdff;
+    font-weight: 500;
+  }
+}
+@include MOBILE {
+  .basie-table {
+    display: block;
+
+    colgroup {
+      display: none;
+    }
+
+    tbody,
+    tr,
+    th,
+    td {
+      display: block;
+    }
+
+    tr {
+      margin-top: 15px;
+    }
+
+    th,
+    td {
+      border: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    th {
+      background-color: transparent;
+      font-size: 15px;
+    }
+
+    td {
+      margin-top: 3px;
+    }
+  }
+}
+
+//* ==========================
+//* signup-table-wrap
+//* ==========================
+.signup-table-wrap {
+  margin-top: 20px;
+
+  [class*="emphasis-color"] {
+    margin-top: 3px;
+    font-size: 14px;
+  }
+}
+@include MOBILE {
+  .signup-table-wrap {
+    margin-top: 0;
   }
 }
