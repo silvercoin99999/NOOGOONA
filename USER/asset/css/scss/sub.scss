@@ -243,6 +243,57 @@ textarea {
 }
 
 //* ==========================
+//* signin-wrap
+//* ==========================
+.signin-wrap {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto 0;
+
+  input[type="password"] {
+    margin-top: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #888;
+
+    li {
+      & + li {
+        &::before {
+          content: "|";
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+
+  .social-signin-btn {
+    width: 100%;
+    margin-top: 30px;
+    background-color: transparent;
+    border: none;
+
+    & + .social-signin-btn {
+      margin-top: 10px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//* ==========================
 //* signup-wrap
 //* ==========================
 .signup-wrap {
