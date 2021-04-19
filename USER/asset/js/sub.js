@@ -43,3 +43,29 @@ $(document).on(
     });
   }
 );
+
+// * -------------------------------
+// * show-match-btn
+// * -------------------------------
+$(document).on("click", ".show-match-btn", function () {
+  var toggle_match = $(this).data("toggleMatch");
+
+  $(".toggle-match-con").each(function () {
+    if ($(this).data("toggleMatch") == toggle_match) {
+      $(this).show();
+    }
+  });
+});
+
+// * -------------------------------
+// * hide-match-btn
+// * -------------------------------
+$(document).on("click", ".hide-match-btn", function () {
+  var toggle_match = $(this).data("toggleMatch");
+
+  $(".toggle-match-con").each(function () {
+    if ($(this).data("toggleMatch") == toggle_match) {
+      $(this).hide();
+    }
+  });
+});

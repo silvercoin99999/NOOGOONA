@@ -106,174 +106,166 @@
 				</div>
 			</div>
 			<div class="inner">
-				<!-- search-btn-wrap -->
-				<div class="search-btn-wrap">
-					<div class="search-wrap">
-						<div class="select-box">
-							<select>
-								<option value="">옵션1</option>
-								<option value="">옵션2</option>
-								<option value="">옵션3</option>
-							</select>
-						</div>
-						<div class="select-box">
-							<select>
-								<option value="">옵션1</option>
-								<option value="">옵션2</option>
-								<option value="">옵션3</option>
-							</select>
-						</div>
-						<div class="select-box">
-							<select>
-								<option value="">옵션1</option>
-								<option value="">옵션2</option>
-								<option value="">옵션3</option>
-							</select>
-						</div>
-						<div class="select-box">
-							<select>
-								<option value="">옵션1</option>
-								<option value="">옵션2</option>
-								<option value="">옵션3</option>
-							</select>
-						</div>
-					</div>
-					<div class="right">
-						<a href="/" class="btn btn--primary">등록</a>
-					</div>
+				<section class="section">
+					<h3 class="h3">이벤트 정보</h3>
+					<table class="basie-table">
+						<colgroup>
+							<col style="width:200px">
+							<col style="width:auto">
+							<col style="width:200px">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>내그룹</th>
+								<td>
+									<div class="select-box">
+										<select>
+											<option value="">옵션1</option>
+											<option value="">옵션2</option>
+											<option value="">옵션3</option>
+										</select>
+									</div>
+									<!-- <p class="emphasis-color1">필수입력 사항 입니다.</p> -->
+								</td>
+								<th>키워드</th>
+								<td>
+									<div class="select-box">
+										<select>
+											<option value="">옵션1</option>
+											<option value="">옵션2</option>
+											<option value="">옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>날짜</th>
+								<td>
+									<input type="password" title="날짜" placeholder="2021-10-11">
+								</td>
+								<th>시간</th>
+								<td>
+									<input type="password" title="시간" placeholder="19:50">
+								</td>
+							</tr>
+							<tr>
+								<th>이벤트 명</th>
+								<td colspan="3">
+									<input type="text" title="이벤트 명" placeholder="이벤트 명">
+								</td>
+							</tr>
+							<tr>
+								<th>장소</th>
+								<td colspan="3">
+									<div class="radio-box-wrap">
+										<label class="radio-box">
+											<input type="radio" name="temp">
+											<span>온라인</span>
+										</label>
+										<label class="radio-box">
+											<input type="radio" name="temp">
+											<span>오프라인</span>
+										</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>장소명</th>
+								<td colspan="3">
+									<input type="text" title="장소명" placeholder="온라인 url 또는 오프라인 장소">
+								</td>
+							</tr>
+							<tr>
+								<th>이벤트 홍보사진</th>
+								<td colspan="3">
+									<input type="file" title="이벤트 홍보사진">
+								</td>
+							</tr>
+							<tr>
+								<th>이벤트 설명</th>
+								<td colspan="3">
+									<textarea title="이벤트 설명"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section class="section">
+					<h3 class="h3">이벤트 정보</h3>
+					<table class="basie-table">
+						<colgroup>
+							<col style="width:200px">
+							<col style="width:auto">
+							<col style="width:200px">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>활동비</th>
+								<td colspan="3">
+									<div class="radio-box-wrap">
+										<label class="radio-box">
+											<input type="radio" name="temp">
+											<span>무료</span>
+										</label>
+										<label class="radio-box">
+											<input type="radio" name="temp">
+											<span>유료</span>
+										</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>지원금 신청</th>
+								<td colspan="3">
+									<div class="radio-box-wrap">
+										<label class="radio-box">
+											<input type="radio" name="temp" class="show-match-btn" data-toggle-match="toggle1">
+											<span>신청</span>
+										</label>
+										<label class="radio-box">
+											<input type="radio" name="temp" class="hide-match-btn" data-toggle-match="toggle1">
+											<span>미신청</span>
+										</label>
+									</div>
+								</td>
+							</tr>
+							<tr class="toggle-match-con" data-toggle-match="toggle1" style="display:none">
+								<th>지원금 활용계획</th>
+								<td colspan="3">
+									<textarea title="지원금 활용계획"></textarea>
+								</td>
+							</tr>
+							<tr class="toggle-match-con" data-toggle-match="toggle1" style="display:none">
+								<th>지원금 수령계좌</th>
+								<td colspan="3">
+									<div class="input-btn-wrap">
+										<input type="text" title="지원금 수령계좌">
+										<button type="button" class="btn btn--primary">계좌정보등록</button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<div class="btn-wrap btn-wrap--center">
+					<button type="button" class="btn btn--primary">
+						<span>신청</span>
+					</button>
+					<button type="button" class="btn btn--primary">
+						<span>수정</span>
+					</button>
+					<button type="button" class="btn btn--primary">
+						<span>결과기록</span>
+					</button>
+					<button type="button" class="btn btn--negative">
+						<span>취소</span>
+					</button>
+					<button type="button" class="btn btn--negative">
+						<span>이벤트 취소</span>
+					</button>
 				</div>
-				<!-- //search-btn-wrap -->
-				<!-- event-list -->
-        <ul class="event-list">
-					<li>
-						<a href="/">
-							<div class="img" style="background-image: url(https://placeimg.com/500/300/any);"></div>
-							<div class="txt">
-								<strong>이벤트제목</strong>
-								<div class="desc">
-									동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세  동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세
-								</div>
-								<div class="place">
-									<i class="fas fa-map-marker-alt"></i>
-									<span>서울시 종로구 낙산길 쿰피르</span>
-								</div>
-								<div class="time">
-									<i class="far fa-calendar-check"></i>
-									<span>2020년 11월 25일, 수, 오후 3:00</span>
-								</div>
-								<div class="keyword">#인권&middot;복지</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="/">
-							<div class="img" style="background-image: url(https://placeimg.com/500/300/any);"></div>
-							<div class="txt">
-								<strong>이벤트제목</strong>
-								<div class="desc">
-									동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세
-								</div>
-								<div class="place">
-									<i class="fas fa-map-marker-alt"></i>
-									<span>서울시 종로구 낙산길 쿰피르</span>
-								</div>
-								<div class="time">
-									<i class="far fa-calendar-check"></i>
-									<span>2020년 11월 25일, 수, 오후 3:00</span>
-								</div>
-								<div class="keyword">#인권&middot;복지</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="/">
-							<div class="img" style="background-image: url(https://placeimg.com/500/300/any);"></div>
-							<div class="txt">
-								<strong>이벤트제목</strong>
-								<div class="desc">
-									동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세
-								</div>
-								<div class="place">
-									<i class="fas fa-map-marker-alt"></i>
-									<span>서울시 종로구 낙산길 쿰피르</span>
-								</div>
-								<div class="time">
-									<i class="far fa-calendar-check"></i>
-									<span>2020년 11월 25일, 수, 오후 3:00</span>
-								</div>
-								<div class="keyword">#인권&middot;복지</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="/">
-							<div class="img" style="background-image: url(https://placeimg.com/500/300/any);"></div>
-							<div class="txt">
-								<strong>이벤트제목</strong>
-								<div class="desc">
-									동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세
-								</div>
-								<div class="place">
-									<i class="fas fa-map-marker-alt"></i>
-									<span>서울시 종로구 낙산길 쿰피르</span>
-								</div>
-								<div class="time">
-									<i class="far fa-calendar-check"></i>
-									<span>2020년 11월 25일, 수, 오후 3:00</span>
-								</div>
-								<div class="keyword">#인권&middot;복지</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="/">
-							<div class="img" style="background-image: url(https://placeimg.com/500/300/any);"></div>
-							<div class="txt">
-								<strong>이벤트제목</strong>
-								<div class="desc">
-									동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세
-								</div>
-								<div class="place">
-									<i class="fas fa-map-marker-alt"></i>
-									<span>서울시 종로구 낙산길 쿰피르</span>
-								</div>
-								<div class="time">
-									<i class="far fa-calendar-check"></i>
-									<span>2020년 11월 25일, 수, 오후 3:00</span>
-								</div>
-								<div class="keyword">#인권&middot;복지</div>
-							</div>
-						</a>
-					</li>
-        </ul>
-				<!-- //event-list -->
-				<!-- pagination -->
-				<div class="pagination">		
-					<a href="#" class="pagination__quick--first">
-						<i class="fas fa-chevron-left"></i>
-						<i class="fas fa-chevron-left"></i>
-						<span class="hide-txt">첫 페이지</span>
-					</a>
-					<a href="#" class="pagination__quick--prev">
-						<i class="fas fa-chevron-left"></i>
-						<span class="hide-txt">이전 페이지</span>
-					</a>
-					<a href="#" class="pagination__num">111</a>
-					<span title="현재 페이지" class="pagination__num">112</span>
-					<a href="#" class="pagination__num">113</a>
-					<a href="#" class="pagination__num">114</a>
-					<a href="#" class="pagination__num">115</a>
-					<a href="#" class="pagination__quick--next">
-						<i class="fas fa-chevron-right"></i>
-						<span class="hide-txt">다음 페이지</span>
-					</a>
-					<a href="#" class="pagination__quick--last">
-						<i class="fas fa-chevron-right"></i>
-						<i class="fas fa-chevron-right"></i>
-						<span class="hide-txt">마지막 페이지</span>
-					</a>
-				</div>
-				<!-- //pagination -->
 			</div>
 		</div>
 		<footer class="footer">
