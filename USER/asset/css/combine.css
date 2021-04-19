@@ -1,6 +1,7 @@
 @charset 'UTF-8';
 
 /* libs */
+@import url(../libs/air-datepicker/datepicker.min.css);
 @import url(../libs/swiper/swiper.min.css);
 
 /* fonts */
