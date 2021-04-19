@@ -465,6 +465,14 @@ textarea {
 					color: #2fcfe3;
 				}
 			}
+
+			&:hover {
+				.txt {
+					.desc {
+						text-decoration: underline;
+					}
+				}
+			}
 		}
 	}
 }
