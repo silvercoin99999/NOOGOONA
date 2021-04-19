@@ -45,6 +45,22 @@ input[type='tel'] {
 }
 
 //* ==========================
+//* date-input
+//* ==========================
+.date-input,
+.time-input {
+	position: relative;
+
+	span {
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		color: #666;
+		transform: translateY(-50%);
+	}
+}
+
+//* ==========================
 //* textarea
 //* ==========================
 textarea {
