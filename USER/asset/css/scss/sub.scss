@@ -461,9 +461,9 @@ textarea {
 }
 
 //* ==========================
-//* event-list
+//* basic-list
 //* ==========================
-.event-list {
+.basic-list {
 	display: flex;
 	flex-direction: column;
 	margin-top: 10px;
@@ -542,7 +542,7 @@ textarea {
 	}
 }
 @include MOBILE {
-	.event-list {
+	.basic-list {
 		li {
 			a {
 				display: block;
@@ -625,6 +625,272 @@ textarea {
 		}
 	}
 }
+
+//* ==========================
+//* profile-wrap
+//* ==========================
+.profile-wrap {
+	display: flex;
+	align-items: center;
+
+	.profile-img-wrap {
+		display: flex;
+		overflow: hidden;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		border: 1px solid #ddd;
+		border-radius: 50%;
+		background-color: #eee;
+
+		.profile-img {
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+	}
+
+	.user-name {
+		margin-left: 5px;
+		font-size: 15px;
+	}
+}
+
+//* ==========================
+//* group-wrap
+//* ==========================
+.group-wrap {
+	display: flex;
+	align-items: center;
+
+	.group-img-wrap {
+		display: flex;
+		overflow: hidden;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		background-color: #eee;
+
+		.group-img {
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+	}
+
+	.group-name {
+		margin-left: 5px;
+		font-size: 15px;
+	}
+}
+
+//* ==========================
+//* detail
+//* ==========================
+.detail {
+	.detail-head {
+		padding: 15px 0;
+
+		strong {
+			font-size: 20px;
+		}
+
+		.profile-wrap {
+			margin-top: 10px;
+		}
+	}
+
+	.detail-body {
+		padding: 20px 0;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		background-color: #f5f5f5;
+
+		.inner {
+			display: flex;
+		}
+
+		.detail-body__left {
+			width: 70%;
+			padding-right: 20px;
+
+			img {
+				display: block;
+				max-width: 100%;
+			}
+
+			.txt {
+				margin-top: 20px;
+			}
+		}
+
+		.detail-body__right {
+			width: 30%;
+			margin-top: -10px;
+
+			.tit {
+				display: block;
+				margin-bottom: 10px;
+				font-weight: 500;
+			}
+
+			> li {
+				margin-top: 10px;
+				padding: 10px;
+				border: 1px solid #ccc;
+				background-color: #fff;
+			}
+
+			.place,
+			.time {
+				display: flex;
+				align-items: center;
+				margin-top: 5px;
+				font-size: 15px;
+
+				> * + * {
+					margin-left: 10px;
+				}
+			}
+
+			.time {
+				margin-top: 5px;
+			}
+
+			.participating-groups {
+				> li {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+@include MOBILE {
+	.detail {
+		.detail-head {
+			padding: 10px 0;
+
+			strong {
+				font-size: 16px;
+			}
+
+			.profile-wrap {
+				margin-top: 5px;
+
+				.user-name {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.detail-body {
+			padding: 10px 0;
+
+			.inner {
+				flex-direction: column-reverse;
+			}
+
+			.detail-body__left {
+				width: 100%;
+				margin-top: 20px;
+
+				.txt {
+					margin-top: 20px;
+				}
+			}
+
+			.detail-body__right {
+				width: 100%;
+
+				.tit {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+
+//* ==========================
+//* attendee
+//* ==========================
+.attendee {
+	> li {
+		margin-top: 10px;
+	}
+}
+
+//* ==========================
+//* comment-wrap
+//* ==========================
+.comment-wrap {
+	display: flex;
+	margin-top: 10px;
+
+	> * {
+		height: 60px;
+	}
+
+	textarea {
+		border-right: none;
+	}
+}
+
+//* ==========================
+//* comment-ul
+//* ==========================
+.comment-ul {
+	> li {
+		margin-top: 10px;
+
+		.comment-ul {
+			padding-left: 10px;
+		}
+	}
+
+	.comment-item {
+		display: flex;
+		align-items: flex-start;
+
+		.comment {
+			width: 100%;
+			padding-left: 10px;
+
+			.comment-info {
+				display: flex;
+				align-items: center;
+
+				.user-name {
+					font-weight: 500;
+				}
+
+				.date {
+					margin-left: 10px;
+					color: #888;
+					font-size: 13px;
+				}
+
+				button {
+					margin-left: 5px;
+					border: none;
+					background-color: transparent;
+				}
+			}
+
+			.comment-con {
+				margin-top: 5px;
+			}
+		}
+	}
+}
+
 
 //* ==========================
 //* signin-wrap
@@ -989,5 +1255,22 @@ textarea {
 		.icon {
 			font-size: 30px;
 		}
+	}
+}
+
+
+//* ==========================
+//* area-warp
+//* ==========================
+.area-warp {
+	img {
+		display: block;
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.check-box-wrap {
+		margin-top: 10px;
 	}
 }
