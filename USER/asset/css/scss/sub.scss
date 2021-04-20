@@ -167,11 +167,37 @@ textarea {
 }
 
 //* ==========================
+//* file-box
+//* ==========================
+.file-box {
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+
+	input[type='file'] {
+		position: absolute;
+		left: -9999px;
+	}
+
+	.btn2 {
+		cursor: pointer;
+	}
+
+	.file-name {
+		margin-left: 5px;
+	}
+}
+
+//* ==========================
 //* flex
 //* ==========================
 .flex {
 	display: flex;
 	align-items: center;
+
+	> * + * {
+		margin-left: 5px;
+	}
 }
 
 //* ==========================
@@ -225,7 +251,6 @@ textarea {
 	.btn {
 		height: 40px;
 		padding: 0 10px;
-		font-weight: 500;
 	}
 }
 
@@ -243,6 +268,12 @@ textarea {
 	font-weight: 500;
 	white-space: nowrap;
 	background-color: transparent;
+}
+@include MOBILE {
+	.btn2 {
+		height: 40px;
+		padding: 0 10px;
+	}
 }
 
 //* ==========================
@@ -340,7 +371,7 @@ textarea {
 
 	th {
 		font-weight: 500;
-		background-color: #f1fdff;
+		background-color: #f5f5f5;
 	}
 
 	p.emphasis-color1 {
@@ -750,7 +781,7 @@ textarea {
 		align-items: center;
 		padding: 15px 20px;
 		border-bottom: 1px solid #ccc;
-		background-color: #f1fdff;
+		background-color: #f5f5f5;
 
 		input[type='checkbox'] {
 			width: 18px;
