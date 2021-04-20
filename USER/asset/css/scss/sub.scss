@@ -70,6 +70,7 @@ textarea {
 	padding: 7px;
 	border: 1px solid #ccc;
 	font-size: 14px;
+	line-height: 1.3;
 }
 
 //* ==========================
@@ -822,8 +823,13 @@ textarea {
 //* attendee
 //* ==========================
 .attendee {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+
 	> li {
 		margin-top: 10px;
+		margin-left: 15px;
 	}
 }
 
@@ -851,7 +857,7 @@ textarea {
 		margin-top: 10px;
 
 		.comment-ul {
-			padding-left: 10px;
+			padding-left: 40px;
 		}
 	}
 
@@ -890,7 +896,28 @@ textarea {
 		}
 	}
 }
+@include MOBILE {
+	.comment-ul {
+		> li {
+			.comment-ul {
+				padding-left: 30px;
+			}
+		}
 
+		.comment-item {
+			.profile-wrap {
+				.profile-img-wrap {
+					width: 25px;
+					height: 25px;
+				}
+			}
+
+			.comment {
+				padding-left: 5px;
+			}
+		}
+	}
+}
 
 //* ==========================
 //* signin-wrap
@@ -1257,7 +1284,6 @@ textarea {
 		}
 	}
 }
-
 
 //* ==========================
 //* area-warp
