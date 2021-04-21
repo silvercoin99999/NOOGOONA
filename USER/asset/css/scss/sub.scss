@@ -15,7 +15,7 @@
 }
 
 .emphasis-color2 {
-	color: #2fcfe3;
+	color: #535bc5;
 }
 
 //* ==========================
@@ -241,7 +241,7 @@ textarea {
 	}
 
 	&--primary {
-		background-color: #2fcfe3;
+		background-color: #535bc5;
 	}
 
 	&--negative {
@@ -323,7 +323,7 @@ textarea {
 .sub-visual {
 	position: relative;
 	height: 300px;
-	background-image: url(../img/sub/sub-visual.jpg);
+	background-image: url(../img/sub/sub-visual.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -452,7 +452,7 @@ textarea {
 
 	span {
 		b {
-			color: #2fcfe3;
+			color: #535bc5;
 		}
 	}
 
@@ -528,7 +528,7 @@ textarea {
 
 				.keyword {
 					margin-top: 10px;
-					color: #2fcfe3;
+					color: #535bc5;
 				}
 			}
 
@@ -608,7 +608,7 @@ textarea {
 	}
 
 	span.pagination__num {
-		color: #2fcfe3;
+		color: #535bc5;
 		font-weight: 500;
 	}
 }
@@ -1026,11 +1026,11 @@ textarea {
 
 			&.path {
 				&::before {
-					background-color: #2fcfe3;
+					background-color: #535bc5;
 				}
 
 				.num {
-					border: 3px solid #2fcfe3;
+					border: 3px solid #535bc5;
 					background-color: #fff;
 				}
 			}
@@ -1174,7 +1174,7 @@ textarea {
 			}
 
 			&:hover {
-				border-color: #2fcfe3;
+				border-color: #535bc5;
 				background-color: #f1fdff;
 			}
 		}
