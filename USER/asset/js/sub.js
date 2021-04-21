@@ -91,3 +91,48 @@ $(document).on("click", ".hide-match-btn", function () {
     }
   });
 });
+
+
+// * -------------------------------
+// * user-util-wrap
+// * -------------------------------
+$(document).click(function(e){
+	var $e_more_opt_wrap = $(e.target).closest('.user-util-wrap');
+
+	// user-util가 안보이면
+	if( !$('.user-util').is(':visible') ){
+		$('.user-util').hide();
+		$('.user-util-wrap').removeClass('active');
+		$e_more_opt_wrap.find('.user-util').show();
+		$e_more_opt_wrap.addClass('active');
+	
+	// user-util가 보이면
+	} else {
+		if( !$e_more_opt_wrap.length ){
+			$e_more_opt_wrap.removeClass('active');
+			$('.user-util').hide();
+		}
+
+		// user-util-btn 눌렀을때
+		if( $(e.target).closest('.user-util-btn').length ){
+
+			// user-util가 열려있는 버튼
+			if( $e_more_opt_wrap.find('.user-util').is(':visible') ){
+				$e_more_opt_wrap.removeClass('active');
+				$e_more_opt_wrap.find('.user-util').hide();
+				
+			// user-util가 닫혀있는 버튼
+			} else {
+				$('.user-util').hide();
+				$('.user-util-wrap').removeClass('active');
+				$e_more_opt_wrap.addClass('active');
+				$e_more_opt_wrap.find('.user-util').show();
+			}
+
+		// 그 외 영역클릭
+		} else {
+			$('.user-util').hide();
+			$('.user-util-wrap').removeClass('active');
+		}
+	}
+});

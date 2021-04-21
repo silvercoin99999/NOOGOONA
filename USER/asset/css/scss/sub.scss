@@ -15,7 +15,7 @@
 }
 
 .emphasis-color2 {
-	color: #535bc5;
+	color: #5e67eb;
 }
 
 //* ==========================
@@ -171,7 +171,7 @@ textarea {
 //* file-box
 //* ==========================
 .file-box {
-	display: flex;
+	display: inline-flex;
 	overflow: hidden;
 	align-items: center;
 
@@ -186,6 +186,22 @@ textarea {
 
 	.file-name {
 		margin-left: 5px;
+	}
+}
+
+
+//* ==========================
+//* file-ul
+//* ==========================
+.file-ul {
+	li {
+		margin-top: 10px;
+
+		button {
+			margin-left: 10px;
+			border: none;
+			background-color: transparent;
+		}
 	}
 }
 
@@ -237,11 +253,11 @@ textarea {
 	white-space: nowrap;
 
 	> * + * {
-		margin-left: 3px;
+		margin-left: 5px;
 	}
 
 	&--primary {
-		background-color: #535bc5;
+		background-color: #5e67eb;
 	}
 
 	&--negative {
@@ -269,6 +285,10 @@ textarea {
 	font-weight: 500;
 	white-space: nowrap;
 	background-color: transparent;
+
+	> * + * {
+		margin-left: 5px;
+	}
 }
 @include MOBILE {
 	.btn2 {
@@ -452,7 +472,7 @@ textarea {
 
 	span {
 		b {
-			color: #535bc5;
+			color: #5e67eb;
 		}
 	}
 
@@ -528,7 +548,7 @@ textarea {
 
 				.keyword {
 					margin-top: 10px;
-					color: #535bc5;
+					color: #5e67eb;
 				}
 			}
 
@@ -608,7 +628,7 @@ textarea {
 	}
 
 	span.pagination__num {
-		color: #535bc5;
+		color: #5e67eb;
 		font-weight: 500;
 	}
 }
@@ -657,6 +677,84 @@ textarea {
 	.user-name {
 		margin-left: 5px;
 		font-size: 15px;
+	}
+
+	&.host {
+		color: #5e67eb;
+
+		.profile-img-wrap {
+			border-width: 2px;
+			border-color: #5e67eb;
+		}
+	}
+}
+
+//* ==========================
+//* user-util-wrap
+//* ==========================
+.user-util-wrap {
+	position: relative;
+
+	.user-util-btn {
+		border: none;
+		background-color: transparent;
+	}
+
+	.user-util {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+		padding-top: 8px;
+		white-space: nowrap;
+
+		ul {
+			position: relative;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 14px;
+			background-color: #fff;
+			box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 100%;
+				left: 13px;
+				width: 0;
+				height: 0;
+				border: solid transparent;
+				pointer-events: none;
+			}
+
+			&::before {
+				margin-left: -8px;
+				border-width: 8px;
+				border-color: rgba(194, 225, 245, 0);
+				border-bottom-color: #ccc;
+			}
+
+			&::after {
+				margin-left: -7px;
+				border-width: 7px;
+				border-color: rgba(136, 183, 213, 0);
+				border-bottom-color: #fff;
+			}
+
+			li {
+				button {
+					padding: 5px 10px;
+					border: none;
+					background-color: transparent;
+
+					&:hover {
+						color: #5e67eb;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -707,6 +805,20 @@ textarea {
 		.profile-wrap {
 			margin-top: 10px;
 		}
+
+		.above-util {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			b {
+				font-weight: 500;
+			}
+
+			> * + * {
+				margin-left: 10px;
+			}
+		}
 	}
 
 	.detail-body {
@@ -730,6 +842,11 @@ textarea {
 
 			.txt {
 				margin-top: 20px;
+			}
+
+			.keyword {
+				margin-top: 20px;
+				color: #5e67eb;
 			}
 		}
 
@@ -802,6 +919,7 @@ textarea {
 			.detail-body__left {
 				width: 100%;
 				margin-top: 20px;
+				padding-right: 0;
 
 				.txt {
 					margin-top: 20px;
@@ -825,6 +943,7 @@ textarea {
 .attendee {
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: -10px;
 	margin-left: -15px;
 
 	> li {
@@ -854,7 +973,7 @@ textarea {
 //* ==========================
 .comment-ul {
 	> li {
-		margin-top: 10px;
+		margin-top: 15px;
 
 		.comment-ul {
 			padding-left: 40px;
@@ -1026,11 +1145,11 @@ textarea {
 
 			&.path {
 				&::before {
-					background-color: #535bc5;
+					background-color: #5e67eb;
 				}
 
 				.num {
-					border: 3px solid #535bc5;
+					border: 3px solid #5e67eb;
 					background-color: #fff;
 				}
 			}
@@ -1174,7 +1293,7 @@ textarea {
 			}
 
 			&:hover {
-				border-color: #535bc5;
+				border-color: #5e67eb;
 				background-color: #f1fdff;
 			}
 		}
