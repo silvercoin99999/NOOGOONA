@@ -131,8 +131,10 @@
 				border-radius: 20px;
 				color: #fff;
 				background-color: #888;
+				transition: all .3s;
 
 				&:hover {
+					border-radius: 0;
 					background-color: #5e67eb;
 				}
 			}
