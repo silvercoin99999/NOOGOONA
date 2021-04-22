@@ -136,3 +136,16 @@ $(document).click(function(e){
 		}
 	}
 });
+
+
+// * -------------------------------
+// * detail-head (fixed)
+// * -------------------------------
+$(window).scroll(function(){ 
+  if( $('.detail-head').length ){
+    var scroll_top = $(document).scrollTop();
+    (scroll_top > 100)
+    ? $('.detail-head').addClass('fixed')
+    : $('.detail-head').removeClass('fixed');
+  }
+});

@@ -114,6 +114,8 @@ body {
 	}
 
 	h1 {
+		margin-top: -5px;
+		white-space: nowrap;
 		line-height: 1;
 
 		> span {
@@ -458,7 +460,23 @@ body {
 		height: 70px;
 
 		h1 {
-			font-size: 18px;
+			> span {
+				font-size: 13px;
+				font-weight: 400;
+
+				span {
+					padding-top: 3px;
+
+					&::before {
+						width: 2px;
+						height: 2px;
+					}
+				}
+			}
+
+			a {
+				font-size: 20px;
+			}
 		}
 
 		.member-wrap {

@@ -197,16 +197,47 @@
 				.txt {
 					margin-top: 10px;
 
+					.info {
+						display: flex;
+						align-items: center;
+						line-height: 1;
+
+						b {
+							padding: 0 7px;
+							border: 1px solid #5e67eb;
+							color: #5e67eb;
+							font-size: 13px;
+							font-weight: 500;
+							line-height: 20px;
+						}
+
+						span {
+							margin-left: 5px;
+							color: #5e67eb;
+							font-weight: 500;
+						}
+
+						& + strong {
+							margin-top: 5px;
+						}
+					}
+
+					.time {
+						margin-top: 3px;
+						color: #888;
+						font-size: 14px;
+					}
+
 					strong {
 						display: block;
 						margin-bottom: 5px;
 						font-size: 17px;
+						font-weight: 500;
 						word-break: keep-all;
 						line-height: 1.2;
 					}
 
-					div {
-						color: #888;
+					.place {
 						font-size: 15px;
 					}
 				}

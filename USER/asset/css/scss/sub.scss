@@ -342,7 +342,7 @@ textarea {
 //* ==========================
 .sub-visual {
 	position: relative;
-	height: 300px;
+	height: 230px;
 	background-image: url(../img/sub/sub-visual.png);
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -377,9 +377,9 @@ textarea {
 }
 
 //* ==========================
-//* basie-table
+//* basic-table
 //* ==========================
-.basie-table {
+.basic-table {
 	margin-top: 20px;
 	border-collapse: collapse;
 
@@ -387,20 +387,21 @@ textarea {
 	td {
 		vertical-align: middle;
 		padding: 10px;
-		border: 1px solid #bbb;
 	}
 
 	th {
+		vertical-align: top;
 		font-weight: 500;
-		background-color: #f5f5f5;
+		text-align: left;
 	}
 
 	p.emphasis-color1 {
 		margin-top: 5px;
+		font-size: 14px;
 	}
 }
 @include MOBILE {
-	.basie-table {
+	.basic-table {
 		display: block;
 		margin-top: 10px;
 
@@ -491,103 +492,90 @@ textarea {
 	border-top: 1px solid #ccc;
 
 	li {
+		display: flex;
+		padding: 10px 0;
 		border-bottom: 1px solid #ccc;
 
-		a {
-			display: flex;
-			padding: 20px 0;
 
-			.img {
-				width: 300px;
-				min-width: 300px;
-				height: 200px;
-				min-height: 200px;
-				border: 1px solid #ddd;
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: cover;
+		.txt {
+			padding-right: 20px;
+
+			> * + * {
+				margin-top: 5px;
 			}
 
-			.txt {
-				padding: 0 20px;
+			.info {
+				display: flex;
+				align-items: center;
+				line-height: 1;
 
-				strong {
-					font-size: 20px;
-				}
-
-				.desc {
-					display: -webkit-box;
-					overflow: hidden;
-					max-height: 66px;
-					margin-top: 10px;
-					text-align: left;
-					text-overflow: ellipsis;
-					word-wrap: break-word;
-					white-space: normal;
-					line-height: 22px;
-
-					-webkit-box-orient: vertical;
-					-webkit-line-clamp: 3;
-				}
-
-				.place,
-				.time {
-					display: flex;
-					align-items: center;
-					margin-top: 5px;
-					font-size: 14px;
-
-					> * + * {
-						margin-left: 5px;
-					}
-				}
-
-				.place {
-					margin-top: 10px;
-				}
-
-				.keyword {
-					margin-top: 10px;
+				b {
+					padding: 0 7px;
+					border: 1px solid #5e67eb;
 					color: #5e67eb;
+					font-size: 13px;
+					font-weight: 500;
+					line-height: 20px;
+				}
+
+				span {
+					margin-left: 5px;
+					color: #5e67eb;
+					font-weight: 500;
+				}
+
+				& + strong {
+					margin-top: 5px;
 				}
 			}
 
-			&:hover {
-				.txt {
-					.desc {
+			strong {
+				display: block;
+				font-size: 22px;
+				font-weight: 500;
+				line-height: 1.2;
+
+				a {
+					&:hover {
+						color: #5e67eb;
 						text-decoration: underline;
 					}
 				}
 			}
+
+			.keyword {
+				margin-top: 5px;
+				color: #888;
+				font-size: 14px;
+			}
+		}
+
+		.img {
+			width: 130px;
+			min-width: 130px;
+			height: 110px;
+			min-height: 110px;
+			margin-left: auto;
+			border: 1px solid #ddd;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
 		}
 	}
 }
 @include MOBILE {
 	.basic-list {
 		li {
-			a {
-				display: block;
-				padding: 10px 0;
+			.txt {
+				padding-right: 0;
 
-				.img {
-					width: 100%;
-					min-width: auto;
+				strong {
+					font-size: 20px;
 				}
+			}
 
-				.txt {
-					margin-top: 5px;
-					padding: 0;
-
-					strong {
-						font-size: 16px;
-					}
-
-					.desc {
-						max-height: 60px;
-						margin-top: 5px;
-						line-height: 20px;
-					}
-				}
+			.img {
+				display: none;
 			}
 		}
 	}
@@ -615,6 +603,10 @@ textarea {
 		margin: 0 2px;
 		border: 1px solid #ccc;
 		font-size: 10px;
+
+		&:hover {
+			color: #5e67eb;
+		}
 	}
 
 	.pagination__num {
@@ -625,6 +617,10 @@ textarea {
 		height: 30px;
 		margin: 0 2px;
 		color: #555;
+
+		&:hover {
+			color: #5e67eb;
+		}
 	}
 
 	span.pagination__num {
@@ -796,7 +792,10 @@ textarea {
 //* ==========================
 .detail {
 	.detail-head {
+		width: 100%;
 		padding: 15px 0;
+		border-bottom: 1px solid #ccc;
+		background-color: #fff;
 
 		strong {
 			font-size: 20px;
@@ -819,11 +818,17 @@ textarea {
 				margin-left: 10px;
 			}
 		}
+
+		&.fixed {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 10;
+		}
 	}
 
 	.detail-body {
 		padding: 20px 0;
-		border-top: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
 		background-color: #f5f5f5;
 
@@ -1006,6 +1011,10 @@ textarea {
 					margin-left: 5px;
 					border: none;
 					background-color: transparent;
+
+					&:hover {
+						color: #5e67eb;
+					}
 				}
 			}
 
@@ -1403,6 +1412,17 @@ textarea {
 		}
 	}
 }
+
+
+//* ==========================
+//* signup-form
+//* ==========================
+.signup-form {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+
 
 //* ==========================
 //* area-warp
