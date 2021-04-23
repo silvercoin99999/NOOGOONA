@@ -1659,3 +1659,120 @@ textarea {
 		}
 	}
 }
+
+
+//* ==========================
+//* faq
+//* ==========================
+.faq {
+	> li {
+		& + li {
+			margin-top: 30px;
+		}
+
+		.q-btn {
+			display: flex;
+			position: relative;
+			align-items: center;
+			width: 100%;
+			padding: 10px 50px 10px 10px;
+			border: none;
+			color: #fff;
+			text-align: left;
+			background-color: #5e67eb;
+
+			i {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 30px;
+				min-width: 30px;
+				height: 30px;
+				min-height: 30px;
+				font-size: 20px;
+				font-style: normal;
+			}
+
+			strong {
+				padding-left: 10px;
+				font-weight: 500;
+			}
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				width: 20px;
+				height: 2px;
+				background-color: #fff;
+				transform: translate(-50%);
+			}
+
+			&:after {
+				margin-right: 10px;
+				transition: all .2s;
+				transform: rotate(90deg);
+			}
+		}
+
+		.a-con {
+			display: none;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-top: none;
+
+			i {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 30px;
+				min-width: 30px;
+				height: 30px;
+				min-height: 30px;
+				border: 1px solid #5e67eb;
+				border-radius: 50%;
+				color: #5e67eb;
+				font-weight: 500;
+				font-style: normal;
+				line-height: 1;
+			}
+
+			> div {
+				padding-left: 10px;
+			}
+		}
+
+		&.active {
+			.q-btn {
+				&:after {
+					transform: rotate(0);
+				}
+			}
+
+			.a-con {
+				display: flex;
+			}
+		}
+	}
+}
+@include MOBILE {
+	.faq {
+		> li {
+			& + li {
+				margin-top: 20px;
+			}
+
+			.q-btn {
+				i {
+					font-size: 16px;
+				}
+			}
+
+			.a-con {
+				padding: 10px;
+			}
+		}
+	}
+}

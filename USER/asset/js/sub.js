@@ -149,3 +149,11 @@ $(window).scroll(function(){
     : $('.detail-head').removeClass('fixed');
   }
 });
+
+
+// * -------------------------------
+// * faq
+// * -------------------------------
+$(document).on('click', '.q-btn', function(){
+  $(this).closest('li').toggleClass('active');
+});
