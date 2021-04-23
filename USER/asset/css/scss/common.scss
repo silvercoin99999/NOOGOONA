@@ -179,19 +179,18 @@ body {
 			font-size: 15px;
 
 			.user-menu-btn {
-				display: flex;
-				overflow: hidden;
-				align-items: center;
-				justify-content: center;
-				width: 30px;
-				height: 30px;
-				border: 1px solid #ddd;
-				border-radius: 50%;
-				background-color: #eee;
+				border: none;
+				background-color: transparent;
 
 				.profile-img {
-					width: 100%;
-					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 30px;
+					height: 30px;
+					border: 1px solid #ddd;
+					border-radius: 50%;
+					background-color: #eee;
 					background-repeat: no-repeat;
 					background-position: center center;
 					background-size: cover;
@@ -248,9 +247,14 @@ body {
 							display: flex;
 
 							.profile-img {
+								display: flex;
+								align-items: center;
+								justify-content: center;
 								width: 40px;
 								height: 40px;
+								border: 1px solid #ddd;
 								border-radius: 50%;
+								background-color: #eee;
 								background-repeat: no-repeat;
 								background-position: center center;
 								background-size: cover;

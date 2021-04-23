@@ -1,10 +1,10 @@
 $(document).ready(function () {
-  var swiper = new Swiper(".swiper-container", {
+  var swiper = new Swiper(".main-preview .swiper-container", {
     slidesPerView: 5,
     spaceBetween: 20,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".main-preview .swiper-button-next",
+      prevEl: ".main-preview .swiper-button-prev",
     },
   });
 });
