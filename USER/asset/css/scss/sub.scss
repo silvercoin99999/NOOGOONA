@@ -441,27 +441,64 @@ textarea {
 //* search-wrap
 //* ==========================
 .search-wrap {
-	display: flex;
-	align-items: center;
-	margin-top: 30px;
-	margin-left: -10px;
+	margin-top: 50px;
 
-	> * {
-		margin-top: 10px;
-		margin-left: 10px;
+	.search-row {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-top: -10px;
+		margin-left: -5px;
+
+		> * {
+			margin-top: 10px;
+			margin-left: 5px;
+		}
+
+		& + .search-row {
+			margin-top: 10px;
+		}
+	}
+
+	.radio-btn {
+		overflow: hidden;
+
+		input[type=radio] {
+			position: absolute;
+			left: -9999px;
+		}
+
+		span {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 35px;
+			padding: 0 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			white-space: nowrap;
+			cursor: pointer;
+		}
+
+		input[type=radio]:checked + span {
+			border: none;
+			color: #fff;
+			background-color: #5e67eb;
+		}
+	}
+
+	.select-box {
+		max-width: 300px;
+
+		select {
+			border-radius: 4px;
+		}
 	}
 }
 @include MOBILE {
 	.search-wrap {
-		flex-wrap: wrap;
-
-		.select-box {
-			width: 100%;
-
-			select {
-				width: 100%;
-			}
-		}
+		margin-top: 30px;
 	}
 }
 
