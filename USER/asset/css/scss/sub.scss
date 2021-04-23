@@ -441,24 +441,20 @@ textarea {
 //* search-wrap
 //* ==========================
 .search-wrap {
-	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 30px;
+	margin-left: -5px;
 
-	.search-row {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		width: 100%;
-		margin-top: -10px;
-		margin-left: -5px;
+	> * {
+		margin-top: 10px;
+		margin-left: 5px;
+	}
 
-		> * {
-			margin-top: 10px;
-			margin-left: 5px;
-		}
-
-		& + .search-row {
-			margin-top: 10px;
-		}
+	& + .search-row {
+		margin-top: 10px;
 	}
 
 	.radio-btn {
@@ -498,7 +494,7 @@ textarea {
 }
 @include MOBILE {
 	.search-wrap {
-		margin-top: 30px;
+		margin-top: 10px;
 	}
 }
 
@@ -624,7 +620,8 @@ textarea {
 		font-size: 10px;
 
 		&:hover {
-			color: #5e67eb;
+			color: #fff;
+			background-color: #5e67eb;
 		}
 	}
 
