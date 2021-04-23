@@ -737,7 +737,7 @@ textarea {
 	display: flex;
 	align-items: center;
 
-	.group-img-wrap {
+	.group-img {
 		display: flex;
 		overflow: hidden;
 		align-items: center;
@@ -747,14 +747,9 @@ textarea {
 		border: 1px solid #ddd;
 		border-radius: 5px;
 		background-color: #eee;
-
-		.group-img {
-			width: 100%;
-			height: 100%;
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-size: cover;
-		}
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
 	}
 
 	.group-name {
