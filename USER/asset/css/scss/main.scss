@@ -106,9 +106,9 @@
 }
 
 //* ==========================
-//* main-keyword
+//* main-category
 //* ==========================
-.main-keyword {
+.main-category {
 	margin-top: 20px;
 
 	ul {
@@ -142,7 +142,7 @@
 	}
 }
 @include MOBILE {
-	.main-keyword {
+	.main-category {
 		ul {
 			margin-top: 5px;
 
