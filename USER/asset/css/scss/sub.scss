@@ -1432,7 +1432,6 @@ textarea {
 }
 
 
-
 //* ==========================
 //* area-warp
 //* ==========================
@@ -1518,6 +1517,144 @@ textarea {
 				> ul {
 					font-size: 15px;
 				}
+			}
+		}
+	}
+}
+
+
+//* ==========================
+//* about-flex
+//* ==========================
+.about-flex {
+	display: flex;
+
+	.txt {
+		padding-right: 20px;
+
+		> span {
+			display: flex;
+			align-items: flex-end;
+			color: #888;
+			font-size: 17px;
+			font-weight: 500;
+
+			span {
+				position: relative;
+				padding-top: 5px;
+				color: #535bc5;
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 50%;
+					width: 3px;
+					height: 3px;
+					border-radius: 50%;
+					background-color: #535bc5;
+					transform: translate(-50%);
+				}
+			}
+		}
+
+		.logo {
+			display: flex;
+			align-items: center;
+			color: #535bc5;
+			font-size: 30px;
+			font-weight: 900;
+			letter-spacing: -1px;
+
+			span {
+				margin-left: 5px;
+			}
+		}
+
+		ul {
+			margin-top: 20px;
+
+			li {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	.iframe-wrap {
+		width: 50%;
+		margin-left: auto;
+
+		iframe {
+			width: 100%;
+		}
+	}
+}
+@include MOBILE {
+	.about-flex {
+		flex-direction: column-reverse;
+
+		.txt {
+			margin-top: 20px;
+			padding-right: 0;
+		}
+
+		.iframe-wrap {
+			width: 100%;
+		}
+	}
+}
+
+
+//* ==========================
+//* procedure
+//* ==========================
+.procedure {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	margin-left: -20px;
+
+	> li {
+		width: 100%;
+		margin-left: 20px;
+
+		.tit {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 50px;
+			padding: 10px;
+			color: #fff;
+			text-align: center;
+			background-color: #5e67eb;
+
+			strong {
+				font-weight: 500;
+			}
+		}
+
+		.con {
+			height: calc(100% - 50px);
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-top: none;
+		}
+	}
+}
+@include MOBILE {
+	.procedure {
+		flex-wrap: wrap;
+		margin-top: 0;
+
+		> li {
+			margin-top: 10px;
+
+			.tit {
+				height: 35px;
+			}
+
+			.con {
+				height: calc(100% - 35px);
 			}
 		}
 	}
