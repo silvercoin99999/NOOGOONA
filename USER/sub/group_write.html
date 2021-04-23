@@ -19,13 +19,16 @@
 		<header class="header">
 			<div class="inner">
 				<h1>
+					<span>
+						<span>시</span><span>민</span>사회<span>참</span>여 모임 플랫폼
+					</span>
 					<a href="/">
 						<i class="fas fa-dove"></i>
 						<span>시민참</span>
 					</a>
 				</h1>
 				<div class="member-wrap">
-          <!-- 비로그인 -->
+					<!-- 비로그인 -->
 					<!--
 					<a href="/">로그인</a>
 					<a href="../sub/signup1.html">회원가입</a>
@@ -107,57 +110,54 @@
 		<div class="content">
       <div class="sub-visual">
 				<div class="inner">
-					<h2 class="h2">모임</h2>
+					<h2 class="h2">그룹등록</h2>
 				</div>
 			</div>
 			<div class="inner">
 				<section class="section">
-					<h3 class="h3">모임 후기</h3>
-					<table class="basie-table">
+					<h3 class="h3">그룹 신청서</h3>
+					<table class="basic-table">
 						<colgroup>
-							<col style="width:170px">
-							<col style="width:auto">
 							<col style="width:170px">
 							<col style="width:auto">
 						</colgroup>
 						<tbody>
 							<tr>
-								<th>모임 후기사진</th>
-								<td colspan="3">
+								<th>그룹명<span class="emphasis-color1">*</span></th>
+								<td>
+									<input type="text" placeholder="그룹명">
+									<!-- <p class="emphasis-color1">필수입력 사항 입니다.</p> -->
+								</td>
+							</tr>
+							<tr>
+								<th>대표사진</th>
+								<td>
 									<label class="file-box">
-										<input type="file" title="모임 홍보사진">
+										<input type="file">
 										<span class="btn2">파일선택</span>
 										<span class="file-name">파일명.jpg</span>
 									</label>
 								</td>
 							</tr>
 							<tr>
-								<th>모임 모임 내용</th>
-								<td colspan="3">
-									<textarea title="활동내용" style="height:150px"></textarea>
+								<th>그룹 설명</th>
+								<td>
+									<textarea style="height:250px" placeholder="그룹을 소개해주세요.&#13;&#10;&#13;&#10;1. 그룹의 목적은 무엇인가요?&#13;&#10;&#13;&#10;2. 어떤 그룹원을 찾고있나요?&#13;&#10;&#13;&#10;3. 모임에서 어떤 일을 하나요?"></textarea>
 								</td>
 							</tr>
-							<tr>
-								<th>영수증 첨부</th>
-								<td colspan="3">
-									<label class="file-box">
-										<input type="file" title="모임 홍보사진">
-										<span class="btn2">파일선택</span>
-									</label>
-									<ul class="file-ul">
-										<li>
-											<span>영수증_사진1.jpg</span>
-											<button type="button"><i class="far fa-trash-alt"></i></button>
-										</li>
-										<li>
-											<span>영수증_사진2.jpg</span>
-											<button type="button"><i class="far fa-trash-alt"></i></button>
-										</li>
-										<li>
-											<span>영수증_사진3.jpg</span>
-											<button type="button"><i class="far fa-trash-alt"></i></button>
-										</li>
-									</ul>
+							<tr class="toggle-match-con" data-toggle-match="toggle1" style="display:none">
+								<th>지원금 활용계획</th>
+								<td>
+									<textarea></textarea>
+								</td>
+							</tr>
+							<tr class="toggle-match-con" data-toggle-match="toggle1" style="display:none">
+								<th>지원금 수령계좌</th>
+								<td>
+									<div class="input-btn-wrap">
+										<input type="text">
+										<button type="button" class="btn btn--primary">계좌정보등록</button>
+									</div>
 								</td>
 							</tr>
 						</tbody>
@@ -165,10 +165,19 @@
 				</section>
 				<div class="btn-wrap btn-wrap--center">
 					<button type="button" class="btn btn--primary">
-						<span>제출</span>
+						<span>신청</span>
+					</button>
+					<button type="button" class="btn btn--primary">
+						<span>수정</span>
+					</button>
+					<button type="button" class="btn btn--primary">
+						<span>결과기록</span>
 					</button>
 					<button type="button" class="btn btn--negative">
 						<span>취소</span>
+					</button>
+					<button type="button" class="btn btn--negative">
+						<span>모임 취소</span>
 					</button>
 				</div>
 			</div>

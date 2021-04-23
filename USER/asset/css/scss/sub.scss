@@ -490,6 +490,7 @@ textarea {
 	flex-direction: column;
 	margin-top: 10px;
 	border-top: 1px solid #ccc;
+	line-height: 1;
 
 	li {
 		display: flex;
@@ -504,29 +505,10 @@ textarea {
 				margin-top: 5px;
 			}
 
-			.info {
-				display: flex;
-				align-items: center;
-				line-height: 1;
-
-				b {
-					padding: 0 7px;
-					border: 1px solid #5e67eb;
-					color: #5e67eb;
-					font-size: 13px;
-					font-weight: 500;
-					line-height: 20px;
-				}
-
-				span {
-					margin-left: 5px;
-					color: #5e67eb;
-					font-weight: 500;
-				}
-
-				& + strong {
-					margin-top: 5px;
-				}
+			.keyword {
+				margin-top: 5px;
+				color: #5e67eb;
+				font-size: 14px;
 			}
 
 			strong {
@@ -541,12 +523,6 @@ textarea {
 						text-decoration: underline;
 					}
 				}
-			}
-
-			.keyword {
-				margin-top: 5px;
-				color: #888;
-				font-size: 14px;
 			}
 		}
 
