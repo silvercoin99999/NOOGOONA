@@ -157,3 +157,13 @@ $(window).scroll(function(){
 $(document).on('click', '.q-btn', function(){
   $(this).closest('li').toggleClass('active');
 });
+
+
+// * -------------------------------
+// * mngr
+// * -------------------------------
+// * mngr-menu
+// * -------------------------------
+$(document).on('click', '.mngr-menu button', function(){
+  $(this).closest('.mngr-menu').toggleClass('active');
+});

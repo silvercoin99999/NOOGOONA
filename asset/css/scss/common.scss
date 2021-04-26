@@ -35,6 +35,7 @@
 	position: relative;
 	padding-bottom: 5px;
 	font-size: 20px;
+	line-height: 1;
 
 	&::first-letter {
 		color: #535bc5;
@@ -106,6 +107,7 @@ body {
 .header {
 	flex-shrink: 0;
 	height: 80px;
+	border-bottom: 1px solid #ccc;
 
 	.inner {
 		display: flex;
