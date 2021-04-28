@@ -115,28 +115,64 @@
 			<div class="inner">
 				<div class="mngr-menu">
 					<strong>관리자</strong>
-					<button type="button">문의 관리</button>
+					<button type="button">모임 관리</button>
 					<ul>
-						<li class="current"><a href="/">문의 관리</a></li>
+						<li><a href="/">문의 관리</a></li>
 						<li><a href="/">공지사항 관리</a></li>
 						<li><a href="/">회원 관리</a></li>
 						<li><a href="/">그룹 관리</a></li>
-						<li><a href="/">모임 관리</a></li>
+						<li class="current"><a href="/">모임 관리</a></li>
 						<li><a href="/">모임 반려내역</a></li>
 					</ul>
 				</div>
 				<div class="mngr-content">
-					<h3 class="h3">문의 관리</h3>
+					<h3 class="h3">모임 관리</h3>
 					<!-- search-wrap-mngr -->
 					<div class="search-wrap-mngr">
 						<div class="search-item-wrap">
 							<div class="search-item">
 								<label>
-									<span class="label-txt">문의일자</span>
+									<span class="label-txt">모임명</span>
+									<input type="text">
+								</label>
+							</div>
+							<div class="search-item">
+								<label>
+									<span class="label-txt">일자</span>
 									<div class="date-input">
 										<input type="text" class="air-datepicker" data-range="true" data-multiple-dates-separator=" ~ ">
 										<span><i class="far fa-calendar-alt"></i></span>
 									</div>
+								</label>
+							</div>
+							<div class="search-item">
+								<label>
+									<span class="label-txt">상태</span>
+									<div class="select-box">
+										<select>
+											<option value="">옵션1</option>
+											<option value="">옵션2</option>
+											<option value="">옵션3</option>
+										</select>
+									</div>
+								</label>
+							</div>
+							<div class="search-item">
+								<label>
+									<span class="label-txt">관심분야</span>
+									<div class="select-box">
+										<select>
+											<option value="">옵션1</option>
+											<option value="">옵션2</option>
+											<option value="">옵션3</option>
+										</select>
+									</div>
+								</label>
+							</div>
+							<div class="search-item">
+								<label>
+									<span class="label-txt">장소</span>
+									<input type="text">
 								</label>
 							</div>
 						</div>
@@ -149,21 +185,17 @@
 					<div class="list-table">
 						<table>
 							<colgroup>
-								<col style="width:50px" class="only-pc">
+								<col style="width:70px" class="only-pc">
 								<col style="width:auto">
 								<col style="width:100px">
-								<col style="width:90px" class="only-pc">
-								<col style="width:70px" class="only-pc">
-								<col style="width:90px" class="only-pc">
+								<col style="width:70px">
 							</colgroup>
 							<thead>
 								<tr>
 									<th class="only-pc">번호</th>
-									<th>제목</th>
-									<th>작성자</th>
-									<th class="only-pc">작성일</th>
-									<th class="only-pc">첨부파일</th>
-									<th class="only-pc">조회수</th>
+									<th>모임명</th>
+									<th>일자</th>
+									<th>상태</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -174,10 +206,8 @@
 											동해물과백두산이마르고닳도록 동해물과백두산이마르고닳도록 동해물과백두산이마르고닳도록 동해물과백두산이마르고닳도록 동해물과백두산이마르고닳도록
 										</a>
 									</td>
-									<td>홍길동이이</td>
-									<td class="only-pc">2021-04-28</td>
-									<td class="only-pc"><i class="far fa-file"></i></td>
-									<td class="only-pc">9,999</td>
+									<td>2021-04-28</td>
+									<td>신청</td>
 								</tr>
 								<tr>
 									<td class="only-pc">998</td>
@@ -186,10 +216,8 @@
 											동해물과백두산이마르고닳도록
 										</a>
 									</td>
-									<td>홍길동</td>
-									<td class="only-pc">2021-04-28</td>
-									<td class="only-pc"></td>
-									<td class="only-pc">9,999</td>
+									<td>2021-04-28</td>
+									<td>종료</td>
 								</tr>
 								<tr>
 									<td class="only-pc">997</td>
@@ -198,10 +226,8 @@
 											동해물과백두산이마르고닳도록
 										</a>
 									</td>
-									<td>홍길동</td>
-									<td class="only-pc">2021-04-28</td>
-									<td class="only-pc"></td>
-									<td class="only-pc">9,999</td>
+									<td>2021-04-28</td>
+									<td>검토</td>
 								</tr>
 								<tr>
 									<td class="only-pc">996</td>
@@ -210,10 +236,8 @@
 											동해물과백두산이마르고닳도록
 										</a>
 									</td>
-									<td>홍길동</td>
-									<td class="only-pc">2021-04-28</td>
-									<td class="only-pc"></td>
-									<td class="only-pc">9,999</td>
+									<td>2021-04-28</td>
+									<td>완료</td>
 								</tr>
 								<tr>
 									<td class="only-pc">995</td>
@@ -222,10 +246,8 @@
 											동해물과백두산이마르고닳도록
 										</a>
 									</td>
-									<td>홍길동</td>
-									<td class="only-pc">2021-04-28</td>
-									<td class="only-pc"></td>
-									<td class="only-pc">9,999</td>
+									<td>2021-04-28</td>
+									<td>반려</td>
 								</tr>
 								<tr>
 									<td class="only-pc">994</td>
@@ -234,10 +256,8 @@
 											동해물과백두산이마르고닳도록
 										</a>
 									</td>
-									<td>홍길동</td>
-									<td class="only-pc">2021-04-28</td>
-									<td class="only-pc"></td>
-									<td class="only-pc">9,999</td>
+									<td>2021-04-28</td>
+									<td>반려</td>
 								</tr>
 								<tr>
 									<td class="only-pc">993</td>
@@ -246,10 +266,8 @@
 											동해물과백두산이마르고닳도록
 										</a>
 									</td>
-									<td>홍길동</td>
-									<td class="only-pc">2021-04-28</td>
-									<td class="only-pc"></td>
-									<td class="only-pc">9,999</td>
+									<td>2021-04-28</td>
+									<td>반려</td>
 								</tr>
 								<tr>
 									<td class="only-pc">992</td>
@@ -258,10 +276,8 @@
 											동해물과백두산이마르고닳도록
 										</a>
 									</td>
-									<td>홍길동</td>
-									<td class="only-pc">2021-04-28</td>
-									<td class="only-pc"></td>
-									<td class="only-pc">9,999</td>
+									<td>2021-04-28</td>
+									<td>반려</td>
 								</tr>
 								<tr>
 									<td class="only-pc">991</td>
@@ -270,10 +286,8 @@
 											동해물과백두산이마르고닳도록
 										</a>
 									</td>
-									<td>홍길동</td>
-									<td class="only-pc">2021-04-28</td>
-									<td class="only-pc"></td>
-									<td class="only-pc">9,999</td>
+									<td>2021-04-28</td>
+									<td>반려</td>
 								</tr>
 								<tr>
 									<td class="only-pc">990</td>
@@ -282,10 +296,8 @@
 											동해물과백두산이마르고닳도록
 										</a>
 									</td>
-									<td>홍길동</td>
-									<td class="only-pc">2021-04-28</td>
-									<td class="only-pc"></td>
-									<td class="only-pc">9,999</td>
+									<td>2021-04-28</td>
+									<td>반려</td>
 								</tr>
 							</tbody>
 						</table>
