@@ -2028,35 +2028,37 @@ textarea {
 .search-wrap-mngr {
 	margin-top: 20px;
 
-	.search-row {
+	.search-item-wrap {
 		display: flex;
 		flex-wrap: wrap;
 		margin-left: -10px;
 
-		.search-col {
+		.search-item {
 			width: calc(50% - 10px);
 			margin-left: 10px;
 		}
 	}
 
 	.label-txt {
+		display: inline-flex;
+		padding: 5px 0 3px;
 		font-size: 15px;
-
-		& + * {
-			margin-top: 3px;
-		}
 	}
 
 	.btn-wrap {
-		margin-top: 10px;
+		margin-top: 0;
 	}
 }
 @include MOBILE {
 	.search-wrap-mngr {
-		.search-row {
-			.search-col {
+		.search-item-wrap {
+			.search-item {
 				width: calc(100% - 10px);
 			}
+		}
+
+		.label-txt {
+			font-size: 14px;
 		}
 	}
 }
