@@ -50,6 +50,7 @@ input[type='tel'] {
 .date-input,
 .time-input {
 	position: relative;
+	width: 100%;
 
 	span {
 		position: absolute;
@@ -188,7 +189,6 @@ textarea {
 		margin-left: 5px;
 	}
 }
-
 
 //* ==========================
 //* file-ul
@@ -438,6 +438,53 @@ textarea {
 }
 
 //* ==========================
+//* list-table
+//* ==========================
+.list-table {
+	margin-top: 30px;
+	font-size: 15px;
+
+	table {
+		table-layout: fixed;
+		border-top: 1px solid #131313;
+
+		th,
+		td {
+			vertical-align: middle;
+			padding: 10px 5px;
+		}
+
+		th {
+			font-weight: 500;
+			background-color: #f5f5f5;
+		}
+
+		td {
+			border-bottom: 1px solid #ccc;
+			text-align: center;
+		}
+
+		.link {
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+@include MOBILE {
+	.list-table {
+		margin-top: 30px;
+		font-size: 14px;
+	}
+}
+
+//* ==========================
 //* search-wrap
 //* ==========================
 .search-wrap {
@@ -489,6 +536,20 @@ textarea {
 
 		select {
 			border-radius: 4px;
+		}
+	}
+
+	.date-input {
+		max-width: 300px;
+	}
+
+	.label-wrap {
+		label {
+			font-size: 14px;
+
+			& + * {
+				margin-top: 3px;
+			}
 		}
 	}
 }
@@ -1424,7 +1485,6 @@ textarea {
 	}
 }
 
-
 //* ==========================
 //* signup-form
 //* ==========================
@@ -1432,7 +1492,6 @@ textarea {
 	max-width: 500px;
 	margin: 0 auto;
 }
-
 
 //* ==========================
 //* area-warp
@@ -1468,7 +1527,6 @@ textarea {
 		margin-top: 10px;
 	}
 }
-
 
 //* ==========================
 //* mypage
@@ -1576,7 +1634,6 @@ textarea {
 	}
 }
 
-
 //* ==========================
 //* about-flex
 //* ==========================
@@ -1658,7 +1715,6 @@ textarea {
 	}
 }
 
-
 //* ==========================
 //* procedure
 //* ==========================
@@ -1713,7 +1769,6 @@ textarea {
 		}
 	}
 }
-
 
 //* ==========================
 //* faq
@@ -1833,7 +1888,6 @@ textarea {
 	}
 }
 
-
 //* ==========================
 //* mngr
 //* ==========================
@@ -1909,8 +1963,7 @@ textarea {
 
 	.mngr-content {
 		width: calc(100% - 200px);
-		padding-top: 50px;
-		padding-left: 50px;
+		padding: 50px 0 50px 50px;
 	}
 }
 @include MOBILE {
@@ -1965,6 +2018,45 @@ textarea {
 			width: 100%;
 			padding-top: 0;
 			padding-left: 0;
+		}
+	}
+}
+
+//* ==========================
+//* search-wrap-mngr
+//* ==========================
+.search-wrap-mngr {
+	margin-top: 20px;
+
+	.search-row {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+
+		.search-col {
+			width: calc(50% - 10px);
+			margin-left: 10px;
+		}
+	}
+
+	.label-txt {
+		font-size: 15px;
+
+		& + * {
+			margin-top: 3px;
+		}
+	}
+
+	.btn-wrap {
+		margin-top: 10px;
+	}
+}
+@include MOBILE {
+	.search-wrap-mngr {
+		.search-row {
+			.search-col {
+				width: calc(100% - 10px);
+			}
 		}
 	}
 }
