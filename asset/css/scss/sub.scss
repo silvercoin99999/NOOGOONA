@@ -2074,3 +2074,65 @@ textarea {
 	margin-top: 30px;
 	background-color: #f5f5f5;
 }
+
+//* ==========================
+//* dimmed-layer
+//* ==========================
+.dimmed-layer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	background-color: rgba(0,0,0,.2);
+}
+
+//* ==========================
+//* layer-popup
+//* ==========================
+.layer-popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: calc(100% - 20px);
+	max-width: 500px;
+	border-radius: 4px;
+	background-color: #fff;
+	transform: translate(-50%, -50%);
+	box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+
+	.layer-popup__head {
+		display: flex;
+		align-items: center;
+		padding: 5px 10px;
+
+		strong {
+			font-weight: 500;
+		}
+
+		button {
+			width: 30px;
+			height: 30px;
+			margin-left: auto;
+			border: none;
+			background-color: transparent;
+
+			&:hover {
+				color: #535bc5;
+			}
+		}
+	}
+
+	.layer-popup__body {
+		padding: 10px 10px 20px;
+
+		.btn-wrap {
+			margin-top: 0;
+
+			.btn {
+				height: 40px;
+			}
+		}
+	}
+}

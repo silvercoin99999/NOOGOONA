@@ -167,3 +167,25 @@ $(document).on('click', '.q-btn', function(){
 $(document).on('click', '.mngr-menu button', function(){
   $(this).closest('.mngr-menu').toggleClass('active');
 });
+
+
+// * -------------------------------
+// * layerPopupOpen
+// * -------------------------------
+function layerPopupOpen(t){
+  var dataLayer = $(t).data('layer');
+  
+  $('.layer-popup').each(function() {
+    if( $(this).data('layer') == dataLayer ) {
+      $(this).closest('.dimmed-layer').show();
+    }
+  });
+}
+
+
+// * -------------------------------
+// * layerPopupClose
+// * -------------------------------
+function layerPopupClose(t){
+  $(t).closest('.dimmed-layer').hide();
+}
