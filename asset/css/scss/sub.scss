@@ -401,6 +401,10 @@ textarea {
 		margin-top: 5px;
 		font-size: 14px;
 	}
+
+	img {
+		max-width: 100%;
+	}
 }
 @include MOBILE {
 	.basic-table {
