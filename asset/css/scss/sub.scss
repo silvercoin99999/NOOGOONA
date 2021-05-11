@@ -1501,15 +1501,32 @@ textarea {
 //* area-warp
 //* ==========================
 .area-warp {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+
 	img {
 		display: block;
-		width: 100%;
+		width: calc(100% - 250px);
 		max-width: 600px;
-		margin: 0 auto;
 	}
-
+	
 	.check-box-wrap {
-		margin-top: 10px;
+		display: block;
+		
+		.check-box {
+			display: block;
+		}
+	}
+}
+@include MOBILE {
+	.area-warp {
+		display: block;
+		
+		img {
+			width: 100%;
+			margin:0 auto;
+		}
 	}
 }
 
