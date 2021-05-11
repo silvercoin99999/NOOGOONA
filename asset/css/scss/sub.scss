@@ -873,6 +873,11 @@ textarea {
 		border-bottom: 1px solid #ccc;
 		background-color: #fff;
 
+		.inner {
+			display: flex;
+			justify-content: space-between;
+		}
+
 		strong {
 			font-size: 20px;
 		}
@@ -885,6 +890,7 @@ textarea {
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
+			white-space: nowrap;
 
 			b {
 				font-weight: 500;
@@ -977,6 +983,10 @@ textarea {
 		.detail-head {
 			padding: 10px 0;
 
+			.inner {
+				display: block;
+			}
+
 			strong {
 				font-size: 16px;
 			}
@@ -987,6 +997,10 @@ textarea {
 				.user-name {
 					font-size: 14px;
 				}
+			}
+
+			.above-util {
+				margin-top: 5px;
 			}
 		}
 
@@ -1510,10 +1524,10 @@ textarea {
 		width: calc(100% - 250px);
 		max-width: 600px;
 	}
-	
+
 	.check-box-wrap {
 		display: block;
-		
+
 		.check-box {
 			display: block;
 		}
@@ -1522,10 +1536,10 @@ textarea {
 @include MOBILE {
 	.area-warp {
 		display: block;
-		
+
 		img {
 			width: 100%;
-			margin:0 auto;
+			margin: 0 auto;
 		}
 	}
 }
