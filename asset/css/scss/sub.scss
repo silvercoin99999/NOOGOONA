@@ -2167,3 +2167,31 @@ textarea {
 		}
 	}
 }
+
+
+//* ==========================
+//* error-wrap
+//* ==========================
+.error-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	padding: 50px 0;
+	text-align: center;
+
+	strong {
+		color: #535bc5;
+		font-size: 100px;
+		font-weight: 400;
+	}
+
+	p {
+		font-size: 20px;
+	}
+
+	.btn {
+		margin-top: 20px;
+	}
+}
