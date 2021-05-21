@@ -192,40 +192,40 @@
 						overflow: hidden;
 						width: 100%;
 						height: 130px;
-	
+
 						.img {
-							transition: transform .2s;
 							width: 100%;
 							height: 100%;
 							background-position: center center;
 							background-size: cover;
+							transition: transform .2s;
 						}
 					}
-	
+
 					.txt {
 						margin-top: 10px;
-	
+
 						> * + * {
 							margin-top: 3px;
 						}
-	
+
 						.info {
 							display: flex;
 							align-items: center;
 							line-height: 1;
-	
+
 							span {
 								margin-left: 5px;
 								color: #5e67eb;
 								font-weight: 500;
 							}
 						}
-	
+
 						.time {
 							color: #5e67eb;
 							font-size: 14px;
 						}
-	
+
 						strong {
 							display: block;
 							font-size: 17px;
@@ -233,7 +233,7 @@
 							word-break: keep-all;
 							line-height: 1.2;
 						}
-	
+
 						.place {
 							font-size: 15px;
 						}
@@ -305,6 +305,54 @@
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+//* ==========================
+//* main-popup-wrap
+//* ==========================
+.main-popup-wrap {
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	z-index: 9999;
+	min-width: 240px;
+	border: 1px solid #222;
+	background-color: #fff;
+	transform: translateX(-50%);
+
+	img {
+		max-width: calc(100vw - 40px);
+	}
+
+	&__btn {
+		display: flex;
+		border-top: 1px solid #222;
+
+		button {
+			width: 100%;
+			height: 50px;
+			border: none;
+			background-color: transparent;
+
+			& + button {
+				border-left: 1px solid #222;
+			}
+
+			&:hover {
+				color: #fff;
+				background-color: #5e67eb;
+			}
+		}
+	}
+}
+@include MOBILE {
+	.main-popup-wrap {
+		&__btn {
+			button {
+				height: 40px;
 			}
 		}
 	}

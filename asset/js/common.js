@@ -86,3 +86,10 @@ $(document).click(function (e) {
     }
   }
 });
+
+// * -------------------------------
+// * layerPopupClose
+// * -------------------------------
+function layerPopupClose(){
+	$('.dimmed-layer:visible').remove();
+}
