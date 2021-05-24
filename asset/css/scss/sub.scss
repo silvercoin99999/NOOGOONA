@@ -583,6 +583,20 @@ textarea {
 }
 
 //* ==========================
+//* no-data
+//* ==========================
+.no-data {
+	padding: 15px 10px;
+	font-size: 15px;
+	text-align: center;
+}
+@include MOBILE {
+	.no-data {
+		font-size: 14px;
+	}
+}
+
+//* ==========================
 //* basic-list
 //* ==========================
 .basic-list {
