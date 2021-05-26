@@ -538,9 +538,18 @@ body {
 		.address-wrap {
 			display: flex;
 
-			img {
-				height: 60px;
+			.img-wrap {
+				display: flex;
 				margin-left: auto;
+
+				img {
+					display: block;
+					height: 50px;
+
+					& + img {
+						margin-left: 20px;
+					}
+				}
 			}
 		}
 
@@ -597,10 +606,19 @@ body {
 			.address-wrap {
 				display: block;
 
-				img {
-					height: 40px;
-					margin-top: 20px;
+				.img-wrap {
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
 					margin-left: 0;
+
+					img {
+						margin-top: 20px;
+
+						& + img {
+							margin-left: 0;
+						}
+					}
 				}
 			}
 
